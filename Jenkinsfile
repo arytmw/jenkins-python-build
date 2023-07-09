@@ -4,13 +4,13 @@ pipeline {
     stage('build') {
       steps {
         sh '''
-        pip3 install -r requirements.txt
+        pip3.10 install -r requirements.txt
         '''
       }
     }
     stage('test') {
       steps {
-        sh 'python3 test.py'
+        sh 'python3.10 test.py'
       }
       post {
         always {
