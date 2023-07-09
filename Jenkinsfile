@@ -1,10 +1,9 @@
 pipeline {
-  agent { docker { image 'python:3.7.2' } }
+  agent any
   stages {
     stage('build') {
       steps {
         sh '''
-        pip install --upgrade pip
         pip install -r requirements.txt
         '''
       }
